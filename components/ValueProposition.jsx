@@ -45,7 +45,7 @@ export default function ValueProposition() {
             <div
               key={card.title}
               className="relative overflow-hidden rounded-[2rem] group cursor-pointer"
-              style={{ height: '18rem' }}
+              style={{ height: '13rem' }}
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
@@ -58,22 +58,10 @@ export default function ValueProposition() {
                 className="absolute inset-0 bg-brand opacity-0 group-hover:opacity-70"
                 style={{ transition: 'opacity 0.5s ease' }}
               />
-              <div className="relative h-full flex flex-col justify-end p-7 overflow-hidden">
-                <h3 className="text-stone font-bold text-xl mb-2 relative z-10" style={{ fontSize: '1.25rem', lineHeight: '1.5' }}>
+              <div className="absolute inset-0 flex items-end justify-start" style={{ padding: '1.8rem' }}>
+                <h3 className="text-stone font-bold relative z-10" style={{ fontSize: '1.25rem', lineHeight: '1.3' }}>
                   {card.title}
                 </h3>
-                {/* CTA slide-in matching alkeme insurance_tabs-item-cta */}
-                <p
-                  className="text-cream font-light text-sm leading-relaxed relative z-10 opacity-0 group-hover:opacity-100"
-                  style={{
-                    transform: 'translateX(-10px)',
-                    transition: 'opacity 0.6s ease, transform 0.6s ease',
-                  }}
-                >
-                  <span className="group-hover:translate-x-0 inline-block" style={{ transition: 'transform 0.6s ease' }}>
-                    {card.description}
-                  </span>
-                </p>
               </div>
             </div>
           ))}
