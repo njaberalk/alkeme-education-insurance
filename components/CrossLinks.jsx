@@ -5,7 +5,7 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 const industryNames = {
   'k12-school-districts': 'K-12 School Districts', 'charter-schools': 'Charter Schools', 'private-schools': 'Private Schools',
   'colleges-universities': 'Colleges & Universities', 'preschools-daycares': 'Preschools & Daycares', 'trade-vocational': 'Trade & Vocational',
-  'tutoring-centers': 'Tutoring Centers', 'online-education': 'Online Education', 'special-education': 'Special Education',
+  'stem-robotics-programs': 'STEM & Robotics Programs', 'online-education': 'Online Education', 'special-education': 'Special Education',
   'after-school-programs': 'After-School Programs',
 };
 

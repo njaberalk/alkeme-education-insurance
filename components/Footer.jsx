@@ -13,7 +13,7 @@ const coverageLinks = [
   { label: 'General Liability', href: '/coverage/general-liability/' },
   { label: 'Professional Liability', href: '/coverage/professional-liability/' },
   { label: 'Abuse & Molestation', href: '/coverage/abuse-molestation/' },
-  { label: 'Commercial Property', href: '/coverage/commercial-property/' },
+  { label: 'Campus Property', href: '/coverage/campus-property/' },
   { label: 'Workers\' Comp', href: '/coverage/workers-compensation/' },
   { label: 'Umbrella / Excess', href: '/coverage/umbrella-excess/' },
 ];

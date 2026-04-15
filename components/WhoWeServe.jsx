@@ -9,7 +9,7 @@ const segments = [
   { name: 'Colleges & Universities', slug: 'colleges-universities', desc: 'Higher education institutions with complex risk profiles' },
   { name: 'Preschools & Daycares', slug: 'preschools-daycares', desc: 'Early childhood education and childcare providers' },
   { name: 'Trade & Vocational', slug: 'trade-vocational', desc: 'Technical training and skilled trades education programs' },
-  { name: 'Tutoring Centers', slug: 'tutoring-centers', desc: 'Supplemental education and learning center operations' },
+  { name: 'STEM & Robotics', slug: 'stem-robotics-programs', desc: 'STEM labs, robotics teams, and maker spaces' },
   { name: 'Online Education', slug: 'online-education', desc: 'Virtual schools and e-learning platform providers' },
   { name: 'Special Education', slug: 'special-education', desc: 'Programs serving students with disabilities and special needs' },
   { name: 'After-School Programs', slug: 'after-school-programs', desc: 'Enrichment activities, camps, and youth organizations' },
