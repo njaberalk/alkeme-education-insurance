@@ -2,15 +2,36 @@
 import Link from 'next/link';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
-export function RelatedIndustries({ slugs, title = 'Industries That Need This Coverage' }) {
+const industryNames = {
+  'k12-school-districts': 'K-12 School Districts', 'charter-schools': 'Charter Schools', 'private-schools': 'Private Schools',
+  'colleges-universities': 'Colleges & Universities', 'preschools-daycares': 'Preschools & Daycares', 'trade-vocational': 'Trade & Vocational',
+  'tutoring-centers': 'Tutoring Centers', 'online-education': 'Online Education', 'special-education': 'Special Education',
+  'after-school-programs': 'After-School Programs',
+};
+
+const resourceNames = {
+  'school-insurance-cost-guide': 'How Much Does School Insurance Cost?',
+  'school-liability-guide': 'School Liability Guide',
+  'abuse-molestation-coverage-guide': 'Abuse & Molestation Coverage Guide',
+  'title-ix-compliance-guide': 'Title IX Compliance Guide',
+  'cyber-threats-schools-guide': 'Cyber Threats for Schools',
+  'student-transportation-guide': 'Student Transportation Guide',
+  'certificate-of-insurance-guide': 'Certificate of Insurance Guide',
+  'claims-process-guide': 'Claims Process Guide',
+  'education-insurance-glossary': 'Insurance Glossary',
+};
+
+const stateNames = {
+  'california': 'California', 'texas': 'Texas', 'new-york': 'New York', 'florida': 'Florida',
+  'illinois': 'Illinois', 'pennsylvania': 'Pennsylvania', 'ohio': 'Ohio', 'georgia': 'Georgia',
+  'north-carolina': 'North Carolina', 'massachusetts': 'Massachusetts', 'arizona': 'Arizona',
+  'new-jersey': 'New Jersey', 'michigan': 'Michigan', 'washington': 'Washington',
+  'colorado': 'Colorado', 'indiana': 'Indiana', 'tennessee': 'Tennessee',
+};
+
+export function RelatedIndustries({ slugs, title = 'Institutions That Need This Coverage' }) {
   const ref = useScrollAnimation();
   if (!slugs?.length) return null;
-
-  const industryNames = {
-    'owner-operators': 'Owner-Operators', 'small-fleets': 'Small Fleets', 'large-fleets': 'Large Fleets',
-    'hot-shot-trucking': 'Hot Shot Trucking', 'ltl-last-mile': 'LTL / Last Mile', 'intermodal': 'Intermodal',
-    'refrigerated': 'Refrigerated', 'flatbed': 'Flatbed', 'hazmat': 'Hazmat', 'car-haulers': 'Car Haulers',
-  };
 
   return (
     <div ref={ref} className="bg-stone fade-in-view" style={{ padding: '5rem 0' }}>
@@ -32,18 +53,6 @@ export function RelatedResourceLinks({ slugs, title = 'Helpful Resources' }) {
   const ref = useScrollAnimation();
   if (!slugs?.length) return null;
 
-  const resourceNames = {
-    'trucking-insurance-cost': 'How Much Does Trucking Insurance Cost?',
-    'fmcsa-insurance-requirements': 'FMCSA Insurance Requirements',
-    'new-authority-insurance': 'Insurance for New Authority',
-    'lower-trucking-insurance-premiums': 'How to Lower Your Premiums',
-    'commercial-auto-vs-trucking-insurance': 'Commercial Auto vs Trucking Insurance',
-    'primary-vs-non-trucking-liability': 'Primary vs Non-Trucking Liability',
-    'occupational-accident-vs-workers-comp': 'Occupational Accident vs Workers Comp',
-    'trucking-insurance-claims-guide': 'Claims Guide',
-    'trucking-insurance-glossary': 'Insurance Glossary',
-  };
-
   return (
     <div ref={ref} className="bg-brand fade-in-view" style={{ padding: '4rem 0' }}>
       <div className="max-w-[68rem] mx-auto px-[60px] max-lg:px-6 max-md:px-4">
@@ -52,7 +61,7 @@ export function RelatedResourceLinks({ slugs, title = 'Helpful Resources' }) {
           {slugs.map(slug => (
             <Link key={slug} href={`/resources/${slug}/`} className="block border border-ash/20 rounded-[2rem] p-5 group no-underline hover:border-gold/30" style={{ transition: 'all 0.24s' }}>
               <span className="text-blue uppercase tracking-[0.12em] font-bold block mb-1" style={{ fontSize: '0.6rem' }}>Guide</span>
-              <span className="text-stone font-bold group-hover:text-gold block" style={{ fontSize: '0.9rem', transition: 'color 0.24s' }}>{resourceNames[slug] || slug} →</span>
+              <span className="text-stone font-bold group-hover:text-gold block" style={{ fontSize: '0.9rem', transition: 'color 0.24s' }}>{resourceNames[slug] || slug} &#8594;</span>
             </Link>
           ))}
         </div>
@@ -64,15 +73,6 @@ export function RelatedResourceLinks({ slugs, title = 'Helpful Resources' }) {
 export function TopStates({ slugs, title = 'Top States' }) {
   const ref = useScrollAnimation();
   if (!slugs?.length) return null;
-
-  const stateNames = {
-    'texas': 'Texas', 'california': 'California', 'florida': 'Florida', 'georgia': 'Georgia',
-    'illinois': 'Illinois', 'ohio': 'Ohio', 'pennsylvania': 'Pennsylvania', 'indiana': 'Indiana',
-    'tennessee': 'Tennessee', 'north-carolina': 'North Carolina', 'new-york': 'New York',
-    'michigan': 'Michigan', 'new-jersey': 'New Jersey', 'louisiana': 'Louisiana',
-    'oklahoma': 'Oklahoma', 'north-dakota': 'North Dakota', 'colorado': 'Colorado',
-    'washington': 'Washington', 'arizona': 'Arizona',
-  };
 
   return (
     <div ref={ref} className="bg-stone fade-in-view" style={{ padding: '4rem 0' }}>
@@ -91,10 +91,5 @@ export function TopStates({ slugs, title = 'Top States' }) {
 }
 
 export function CitiesInState({ stateSlug, stateName }) {
-  // This will be used dynamically - imports cities data
-  const ref = useScrollAnimation();
-
-  // Dynamic import at build time won't work in client component
-  // Instead, we pass cities as a prop from the page component
-  return null; // Handled in the page template directly
+  return null;
 }

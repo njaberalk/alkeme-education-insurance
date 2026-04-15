@@ -11,19 +11,17 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-brand" style={{ paddingTop: '16rem', paddingBottom: '8rem' }}>
-      {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1920&q=80"
-          alt="Commercial semi-truck driving on a highway at sunset for trucking insurance"
+          src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=80"
+          alt="University campus with students walking between buildings for education insurance"
           width={1920}
           height={1080}
           loading="eager"
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ opacity: 0.5, objectPosition: '50% 0%', filter: 'grayscale(100%)' }}
+          style={{ opacity: 0.5, objectPosition: '50% 40%', filter: 'grayscale(100%)' }}
         />
         <div className="absolute inset-0 bg-brand" style={{ opacity: 0.45 }} />
-        {/* Grain texture overlay */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -35,7 +33,6 @@ export default function Hero() {
         />
       </div>
 
-      {/* Content */}
       <div className="relative">
         <div className="max-w-[68rem] mx-auto px-[60px] max-lg:px-6 max-md:px-4">
           <h1
@@ -50,9 +47,9 @@ export default function Hero() {
               transition: 'opacity 0.7s ease 0.1s, transform 0.7s ease 0.1s',
             }}
           >
-            <span className="text-stone">Coverage Built for</span>
+            <span className="text-stone">Educate with</span>
             <br />
-            <span className="text-gold">the Road Ahead.</span>
+            <span className="text-gold">Confidence.</span>
           </h1>
 
           <p
@@ -67,7 +64,7 @@ export default function Hero() {
               transition: 'opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s',
             }}
           >
-            We help trucking companies find the right insurance. Our team covers auto liability, cargo, physical damage, and more. We work with owner-operators and fleets in all 50 states.
+            We help schools, colleges, and educational institutions find the right insurance. Our team covers general liability, professional liability, abuse and molestation, property, and more across all 50 states.
           </p>
 
           <p
@@ -82,7 +79,7 @@ export default function Hero() {
             }}
             className="mb-8"
           >
-            ALKEME is a licensed insurance broker. We offer trucking insurance such as auto liability, cargo, and physical damage. We serve owner-operators and fleets in every state.
+            ALKEME is a licensed insurance broker. We specialize in educational institution insurance including liability, property, cyber, and student accident coverage for K-12 districts, colleges, and childcare centers.
           </p>
 
           <div

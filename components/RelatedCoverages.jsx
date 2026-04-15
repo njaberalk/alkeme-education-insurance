@@ -2,17 +2,17 @@
 import Link from 'next/link';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
-// Basic coverage metadata for cross-linking
 const allCoverages = {
-  'auto-liability': { title: 'Primary Auto Liability', desc: 'Liability protection for at-fault accidents' },
-  'physical-damage': { title: 'Physical Damage', desc: 'Covers repair or replacement of your vehicles' },
-  'motor-truck-cargo': { title: 'Motor Truck Cargo', desc: 'Protects goods in transit' },
-  'general-liability': { title: 'General Liability', desc: 'Third-party claims outside vehicle operation' },
-  'non-trucking-liability': { title: 'Non-Trucking Liability', desc: 'Coverage for personal use of truck' },
-  'trailer-interchange': { title: 'Trailer Interchange', desc: 'Covers trailers under interchange agreements' },
+  'general-liability': { title: 'General Liability', desc: 'Third-party injury and property damage protection' },
+  'professional-liability': { title: 'Professional Liability (E&O)', desc: 'Negligent instruction and educational errors coverage' },
   'workers-compensation': { title: 'Workers\' Compensation', desc: 'Employee injury wage and medical benefits' },
-  'umbrella-excess-liability': { title: 'Umbrella / Excess', desc: 'Additional liability protection layer' },
-  'occupational-accident': { title: 'Occupational Accident', desc: 'Coverage for independent contractors' },
+  'commercial-property': { title: 'Commercial Property', desc: 'Building, equipment, and technology protection' },
+  'abuse-molestation': { title: 'Abuse & Molestation', desc: 'Dedicated abuse and misconduct claims coverage' },
+  'directors-officers': { title: 'Directors & Officers', desc: 'Board member and administrator liability protection' },
+  'cyber-liability': { title: 'Cyber Liability', desc: 'Data breach and ransomware response coverage' },
+  'commercial-auto': { title: 'Commercial Auto', desc: 'School bus and institutional vehicle coverage' },
+  'umbrella-excess': { title: 'Umbrella / Excess', desc: 'Additional liability protection layer' },
+  'student-accident': { title: 'Student Accident', desc: 'Medical expense coverage for student injuries' },
 };
 
 export default function RelatedCoverages({ slugs, title = 'Related Coverage' }) {

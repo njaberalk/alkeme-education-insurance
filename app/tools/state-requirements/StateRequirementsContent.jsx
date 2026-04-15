@@ -27,10 +27,10 @@ export default function StateRequirementsContent() {
         <div className="relative max-w-[68rem] mx-auto px-[60px] max-lg:px-6 max-md:px-4 text-center">
           <p className="text-blue uppercase tracking-[0.15em] font-bold mb-4" style={{ fontSize: '0.85rem' }}>Free Tool</p>
           <h1 className="text-stone font-extrabold tracking-tight mb-4" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: '1.1' }}>
-            State Trucking Insurance Requirements
+            State Education Insurance Requirements
           </h1>
           <p className="text-cream font-light mx-auto" style={{ fontSize: '1.1rem', lineHeight: '1.6', maxWidth: '600px' }}>
-            Select a state to see minimum insurance requirements, workers compensation rules, filing deadlines, and important state-specific regulations.
+            Select a state to see compulsory attendance ages, workers compensation requirements, state DOE agency, and important regulatory notes for educational institutions.
           </p>
         </div>
       </section>
@@ -67,7 +67,7 @@ export default function StateRequirementsContent() {
                   </div>
                   <div className="flex gap-3">
                     <Link href={`/states/${result.slug}/`} className="inline-flex items-center border-2 border-brand text-brand rounded-[2rem] font-semibold uppercase tracking-[0.12em] hover:bg-brand hover:text-stone no-underline" style={{ padding: '0.5rem 1.2rem', fontSize: '0.65rem', transition: 'all 0.24s' }}>
-                      Full State Page →
+                      Full State Page &rarr;
                     </Link>
                     <a href="https://alkemeins.com/form" className="inline-flex items-center border-2 border-gold bg-gold text-brand rounded-[2rem] font-semibold uppercase tracking-[0.12em] hover:border-brand hover:bg-brand hover:text-stone no-underline" style={{ padding: '0.5rem 1.2rem', fontSize: '0.65rem', transition: 'all 0.24s' }}>
                       Get a Quote
@@ -78,19 +78,19 @@ export default function StateRequirementsContent() {
                 {/* Requirements Grid */}
                 <div className="grid sm:grid-cols-2 gap-4 mb-6">
                   <div className="border border-ash rounded-[1rem] p-4">
-                    <p className="text-brand/50 uppercase tracking-[0.1em] font-bold mb-1" style={{ fontSize: '0.65rem' }}>Federal Minimum Liability</p>
+                    <p className="text-brand/50 uppercase tracking-[0.1em] font-bold mb-1" style={{ fontSize: '0.65rem' }}>Recommended Min. Liability</p>
                     <p className="text-brand font-bold" style={{ fontSize: '1.3rem' }}>{result.minLiability}</p>
                   </div>
                   <div className="border border-ash rounded-[1rem] p-4">
-                    <p className="text-brand/50 uppercase tracking-[0.1em] font-bold mb-1" style={{ fontSize: '0.65rem' }}>State Auto Minimums</p>
-                    <p className="text-brand font-bold" style={{ fontSize: '1.1rem' }}>{result.personalAutoMin}</p>
+                    <p className="text-brand/50 uppercase tracking-[0.1em] font-bold mb-1" style={{ fontSize: '0.65rem' }}>Compulsory Attendance Ages</p>
+                    <p className="text-brand font-bold" style={{ fontSize: '1.1rem' }}>{result.compulsoryAges}</p>
                   </div>
                   <div className="border border-ash rounded-[1rem] p-4">
                     <p className="text-brand/50 uppercase tracking-[0.1em] font-bold mb-1" style={{ fontSize: '0.65rem' }}>Workers&apos; Compensation</p>
                     <p className="text-brand font-bold" style={{ fontSize: '1rem' }}>
                       {result.wcRequired ? (
                         result.wcMonopolistic ? (
-                          <span className="text-gold">Required — Monopolistic State Fund</span>
+                          <span className="text-gold">Required &mdash; Monopolistic State Fund</span>
                         ) : (
                           <span>Required</span>
                         )
@@ -100,8 +100,8 @@ export default function StateRequirementsContent() {
                     </p>
                   </div>
                   <div className="border border-ash rounded-[1rem] p-4">
-                    <p className="text-brand/50 uppercase tracking-[0.1em] font-bold mb-1" style={{ fontSize: '0.65rem' }}>State DOT Agency</p>
-                    <p className="text-brand font-bold" style={{ fontSize: '0.9rem' }}>{result.dotAgency}</p>
+                    <p className="text-brand/50 uppercase tracking-[0.1em] font-bold mb-1" style={{ fontSize: '0.65rem' }}>State DOE Agency</p>
+                    <p className="text-brand font-bold" style={{ fontSize: '0.9rem' }}>{result.doeAgency}</p>
                   </div>
                 </div>
 
@@ -116,11 +116,11 @@ export default function StateRequirementsContent() {
               <div className="grid sm:grid-cols-2 gap-4 mt-6">
                 <Link href={`/states/${result.slug}/`} className="block border-2 border-ash rounded-[2rem] p-5 hover:border-blue-dark no-underline" style={{ transition: 'all 0.24s' }}>
                   <span className="text-blue-dark uppercase tracking-[0.12em] font-bold block mb-1" style={{ fontSize: '0.65rem' }}>Detailed Info</span>
-                  <span className="text-brand font-bold block" style={{ fontSize: '0.9rem' }}>Trucking Insurance in {result.state} →</span>
+                  <span className="text-brand font-bold block" style={{ fontSize: '0.9rem' }}>Education Insurance in {result.state} &rarr;</span>
                 </Link>
-                <Link href="/tools/fmcsa-checker/" className="block border-2 border-ash rounded-[2rem] p-5 hover:border-blue-dark no-underline" style={{ transition: 'all 0.24s' }}>
+                <Link href="/tools/coverage-needs-assessment/" className="block border-2 border-ash rounded-[2rem] p-5 hover:border-blue-dark no-underline" style={{ transition: 'all 0.24s' }}>
                   <span className="text-blue-dark uppercase tracking-[0.12em] font-bold block mb-1" style={{ fontSize: '0.65rem' }}>Tool</span>
-                  <span className="text-brand font-bold block" style={{ fontSize: '0.9rem' }}>FMCSA Requirements Checker →</span>
+                  <span className="text-brand font-bold block" style={{ fontSize: '0.9rem' }}>Coverage Needs Assessment &rarr;</span>
                 </Link>
               </div>
             </div>
@@ -136,7 +136,7 @@ export default function StateRequirementsContent() {
                     <thead>
                       <tr className="bg-brand text-stone">
                         <th className="text-left p-3 font-bold uppercase tracking-[0.1em]" style={{ fontSize: '0.7rem' }}>State</th>
-                        <th className="text-left p-3 font-bold uppercase tracking-[0.1em]" style={{ fontSize: '0.7rem' }}>Min. Liability</th>
+                        <th className="text-left p-3 font-bold uppercase tracking-[0.1em]" style={{ fontSize: '0.7rem' }}>Compulsory Ages</th>
                         <th className="text-left p-3 font-bold uppercase tracking-[0.1em]" style={{ fontSize: '0.7rem' }}>WC Required</th>
                         <th className="text-left p-3 font-bold uppercase tracking-[0.1em]" style={{ fontSize: '0.7rem' }}>Key Notes</th>
                       </tr>
@@ -149,7 +149,7 @@ export default function StateRequirementsContent() {
                               {s.state}
                             </button>
                           </td>
-                          <td className="p-3 text-brand">{s.minLiability}</td>
+                          <td className="p-3 text-brand">{s.compulsoryAges}</td>
                           <td className="p-3 text-brand">{s.wcRequired ? (s.wcMonopolistic ? 'Yes (State Fund)' : 'Yes') : 'Voluntary'}</td>
                           <td className="p-3 text-brand/60" style={{ maxWidth: '300px' }}>{s.specialNotes.substring(0, 80)}...</td>
                         </tr>

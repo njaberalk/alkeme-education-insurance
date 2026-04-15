@@ -3,16 +3,16 @@ import Link from 'next/link';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const segments = [
-  { name: 'Owner-Operators', slug: 'owner-operators', desc: 'Single-truck operations and independent drivers' },
-  { name: 'Small Fleets', slug: 'small-fleets', desc: 'Growing operations with 2–15 power units' },
-  { name: 'Large Fleets', slug: 'large-fleets', desc: 'Enterprise carriers with complex risk profiles' },
-  { name: 'Hot Shot Trucking', slug: 'hot-shot-trucking', desc: 'Time-critical freight and expedited loads' },
-  { name: 'LTL / Last Mile', slug: 'ltl-last-mile', desc: 'Less-than-truckload and final delivery operations' },
-  { name: 'Intermodal', slug: 'intermodal', desc: 'Container and multi-mode transportation' },
-  { name: 'Refrigerated', slug: 'refrigerated', desc: 'Temperature-controlled cargo and reefer units' },
-  { name: 'Flatbed', slug: 'flatbed', desc: 'Open-deck and specialized heavy haul carriers' },
-  { name: 'Hazmat', slug: 'hazmat', desc: 'Hazardous materials transportation specialists' },
-  { name: 'Car Haulers', slug: 'car-haulers', desc: 'Auto transport and vehicle logistics carriers' },
+  { name: 'K-12 School Districts', slug: 'k12-school-districts', desc: 'Public school systems serving kindergarten through twelfth grade' },
+  { name: 'Charter Schools', slug: 'charter-schools', desc: 'Independent public schools with unique governance needs' },
+  { name: 'Private Schools', slug: 'private-schools', desc: 'Tuition-based institutions including religious and preparatory academies' },
+  { name: 'Colleges & Universities', slug: 'colleges-universities', desc: 'Higher education institutions with complex risk profiles' },
+  { name: 'Preschools & Daycares', slug: 'preschools-daycares', desc: 'Early childhood education and childcare providers' },
+  { name: 'Trade & Vocational', slug: 'trade-vocational', desc: 'Technical training and skilled trades education programs' },
+  { name: 'Tutoring Centers', slug: 'tutoring-centers', desc: 'Supplemental education and learning center operations' },
+  { name: 'Online Education', slug: 'online-education', desc: 'Virtual schools and e-learning platform providers' },
+  { name: 'Special Education', slug: 'special-education', desc: 'Programs serving students with disabilities and special needs' },
+  { name: 'After-School Programs', slug: 'after-school-programs', desc: 'Enrichment activities, camps, and youth organizations' },
 ];
 
 export default function WhoWeServe() {
@@ -23,16 +23,16 @@ export default function WhoWeServe() {
     <section id="who-we-serve" className="bg-stone" style={{ padding: '7rem 0' }}>
       <div className="max-w-[68rem] mx-auto px-[60px] max-lg:px-6 max-md:px-4">
         <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-16 fade-in-view">
-          <p className="text-blue uppercase tracking-[0.15em] font-bold mb-4" style={{ fontSize: '0.85rem' }}>Industries Served</p>
-          <h2 className="text-brand font-bold leading-[1.3] tracking-tight mb-5" style={{ fontSize: 'clamp(2.2rem, 4vw, 2.6rem)' }}>Coverage for Every Type of Operation</h2>
-          <p className="text-brand" style={{ fontSize: '1rem', lineHeight: '1.6' }}>We serve trucking and transportation businesses across all segments — from single-truck owner-operators to large enterprise fleets.</p>
+          <p className="text-blue uppercase tracking-[0.15em] font-bold mb-4" style={{ fontSize: '0.85rem' }}>Institutions Served</p>
+          <h2 className="text-brand font-bold leading-[1.3] tracking-tight mb-5" style={{ fontSize: 'clamp(2.2rem, 4vw, 2.6rem)' }}>Coverage for Every Type of Institution</h2>
+          <p className="text-brand" style={{ fontSize: '1rem', lineHeight: '1.6' }}>We serve educational institutions of all types and sizes — from small preschools to large university systems.</p>
         </div>
         <div ref={gridRef} className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 stagger-children">
           {segments.map((seg) => (
             <Link key={seg.name} href={`/industries/${seg.slug}/`} className="group border-2 border-ash rounded-[2rem] p-6 text-center bg-white/40 no-underline block" style={{ transition: 'all 0.24s' }}>
               <div className="w-12 h-12 bg-brand rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gold" style={{ transition: 'all 0.24s' }}>
                 <svg className="w-6 h-6 text-stone group-hover:text-brand" style={{ transition: 'color 0.24s' }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
                 </svg>
               </div>
               <h3 className="text-brand font-bold mb-1" style={{ fontSize: '0.9rem' }}>{seg.name}</h3>

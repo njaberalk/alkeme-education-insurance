@@ -1,54 +1,56 @@
 // Cross-linking maps for dense internal linking
-// Coverage → which industries commonly need this coverage
+// Coverage -> which industries commonly need this coverage
 export const coverageToIndustries = {
-  'auto-liability': ['owner-operators', 'small-fleets', 'large-fleets', 'hot-shot-trucking'],
-  'physical-damage': ['owner-operators', 'small-fleets', 'large-fleets', 'flatbed'],
-  'motor-truck-cargo': ['owner-operators', 'refrigerated', 'flatbed', 'hazmat'],
-  'general-liability': ['large-fleets', 'ltl-last-mile', 'intermodal'],
-  'non-trucking-liability': ['owner-operators', 'hot-shot-trucking'],
-  'trailer-interchange': ['intermodal', 'ltl-last-mile', 'large-fleets'],
-  'workers-compensation': ['small-fleets', 'large-fleets', 'ltl-last-mile'],
-  'umbrella-excess-liability': ['large-fleets', 'hazmat', 'car-haulers'],
-  'occupational-accident': ['owner-operators', 'hot-shot-trucking', 'small-fleets'],
+  'general-liability': ['k12-school-districts', 'charter-schools', 'private-schools', 'preschools-daycares'],
+  'professional-liability': ['k12-school-districts', 'charter-schools', 'private-schools', 'colleges-universities'],
+  'workers-compensation': ['k12-school-districts', 'colleges-universities', 'trade-vocational', 'preschools-daycares'],
+  'commercial-property': ['k12-school-districts', 'colleges-universities', 'private-schools', 'charter-schools'],
+  'abuse-molestation': ['preschools-daycares', 'k12-school-districts', 'private-schools', 'after-school-programs'],
+  'directors-officers': ['k12-school-districts', 'charter-schools', 'colleges-universities', 'private-schools'],
+  'cyber-liability': ['k12-school-districts', 'colleges-universities', 'online-education', 'charter-schools'],
+  'commercial-auto': ['k12-school-districts', 'special-education', 'after-school-programs', 'preschools-daycares'],
+  'umbrella-excess': ['k12-school-districts', 'colleges-universities', 'charter-schools', 'private-schools'],
+  'student-accident': ['k12-school-districts', 'trade-vocational', 'private-schools', 'after-school-programs'],
 };
 
-// Coverage → which resources are most relevant
+// Coverage -> which resources are most relevant
 export const coverageToResources = {
-  'auto-liability': ['fmcsa-insurance-requirements', 'trucking-insurance-cost', 'new-authority-insurance'],
-  'physical-damage': ['trucking-insurance-cost', 'lower-trucking-insurance-premiums'],
-  'motor-truck-cargo': ['fmcsa-insurance-requirements', 'trucking-insurance-cost'],
-  'general-liability': ['commercial-auto-vs-trucking-insurance', 'trucking-insurance-glossary'],
-  'non-trucking-liability': ['primary-vs-non-trucking-liability', 'trucking-insurance-glossary'],
-  'trailer-interchange': ['fmcsa-insurance-requirements', 'trucking-insurance-glossary'],
-  'workers-compensation': ['occupational-accident-vs-workers-comp', 'trucking-insurance-cost'],
-  'umbrella-excess-liability': ['trucking-insurance-cost', 'trucking-insurance-claims-guide'],
-  'occupational-accident': ['occupational-accident-vs-workers-comp', 'new-authority-insurance'],
+  'general-liability': ['school-insurance-cost-guide', 'school-liability-guide', 'certificate-of-insurance-guide'],
+  'professional-liability': ['school-liability-guide', 'title-ix-compliance-guide', 'education-insurance-glossary'],
+  'workers-compensation': ['school-insurance-cost-guide', 'claims-process-guide', 'education-insurance-glossary'],
+  'commercial-property': ['school-insurance-cost-guide', 'claims-process-guide'],
+  'abuse-molestation': ['abuse-molestation-coverage-guide', 'school-liability-guide', 'claims-process-guide'],
+  'directors-officers': ['title-ix-compliance-guide', 'school-liability-guide', 'education-insurance-glossary'],
+  'cyber-liability': ['cyber-threats-schools-guide', 'school-insurance-cost-guide', 'education-insurance-glossary'],
+  'commercial-auto': ['student-transportation-guide', 'school-insurance-cost-guide', 'certificate-of-insurance-guide'],
+  'umbrella-excess': ['school-insurance-cost-guide', 'school-liability-guide', 'claims-process-guide'],
+  'student-accident': ['school-insurance-cost-guide', 'student-transportation-guide', 'education-insurance-glossary'],
 };
 
-// Industry → top states for that industry
+// Industry -> top states for that industry
 export const industryToStates = {
-  'owner-operators': ['texas', 'california', 'florida', 'georgia', 'ohio'],
-  'small-fleets': ['texas', 'illinois', 'california', 'pennsylvania', 'ohio'],
-  'large-fleets': ['texas', 'california', 'illinois', 'indiana', 'tennessee'],
-  'hot-shot-trucking': ['texas', 'oklahoma', 'louisiana', 'north-dakota', 'colorado'],
-  'ltl-last-mile': ['california', 'texas', 'new-york', 'illinois', 'florida'],
-  'intermodal': ['illinois', 'california', 'new-jersey', 'georgia', 'texas'],
-  'refrigerated': ['california', 'florida', 'texas', 'washington', 'arizona'],
-  'flatbed': ['texas', 'pennsylvania', 'ohio', 'indiana', 'north-carolina'],
-  'hazmat': ['texas', 'louisiana', 'new-jersey', 'ohio', 'california'],
-  'car-haulers': ['michigan', 'texas', 'georgia', 'california', 'indiana'],
+  'k12-school-districts': ['california', 'texas', 'new-york', 'florida', 'illinois'],
+  'charter-schools': ['california', 'texas', 'florida', 'arizona', 'ohio'],
+  'private-schools': ['california', 'new-york', 'florida', 'pennsylvania', 'massachusetts'],
+  'colleges-universities': ['california', 'new-york', 'texas', 'pennsylvania', 'massachusetts'],
+  'preschools-daycares': ['california', 'texas', 'florida', 'new-york', 'illinois'],
+  'trade-vocational': ['california', 'texas', 'florida', 'ohio', 'pennsylvania'],
+  'tutoring-centers': ['california', 'new-york', 'texas', 'florida', 'new-jersey'],
+  'online-education': ['california', 'texas', 'florida', 'new-york', 'arizona'],
+  'special-education': ['california', 'new-york', 'texas', 'pennsylvania', 'illinois'],
+  'after-school-programs': ['california', 'texas', 'new-york', 'florida', 'georgia'],
 };
 
-// Industry → relevant resources
+// Industry -> relevant resources
 export const industryToResources = {
-  'owner-operators': ['trucking-insurance-cost', 'new-authority-insurance', 'occupational-accident-vs-workers-comp'],
-  'small-fleets': ['trucking-insurance-cost', 'lower-trucking-insurance-premiums', 'fmcsa-insurance-requirements'],
-  'large-fleets': ['lower-trucking-insurance-premiums', 'trucking-insurance-claims-guide', 'fmcsa-insurance-requirements'],
-  'hot-shot-trucking': ['new-authority-insurance', 'trucking-insurance-cost', 'fmcsa-insurance-requirements'],
-  'ltl-last-mile': ['trucking-insurance-cost', 'commercial-auto-vs-trucking-insurance'],
-  'intermodal': ['fmcsa-insurance-requirements', 'trucking-insurance-glossary'],
-  'refrigerated': ['trucking-insurance-cost', 'trucking-insurance-claims-guide'],
-  'flatbed': ['trucking-insurance-cost', 'lower-trucking-insurance-premiums'],
-  'hazmat': ['fmcsa-insurance-requirements', 'trucking-insurance-cost'],
-  'car-haulers': ['trucking-insurance-cost', 'lower-trucking-insurance-premiums'],
+  'k12-school-districts': ['school-insurance-cost-guide', 'school-liability-guide', 'title-ix-compliance-guide'],
+  'charter-schools': ['school-insurance-cost-guide', 'certificate-of-insurance-guide', 'school-liability-guide'],
+  'private-schools': ['school-insurance-cost-guide', 'abuse-molestation-coverage-guide', 'school-liability-guide'],
+  'colleges-universities': ['title-ix-compliance-guide', 'cyber-threats-schools-guide', 'school-insurance-cost-guide'],
+  'preschools-daycares': ['abuse-molestation-coverage-guide', 'school-insurance-cost-guide', 'school-liability-guide'],
+  'trade-vocational': ['school-insurance-cost-guide', 'claims-process-guide', 'education-insurance-glossary'],
+  'tutoring-centers': ['school-insurance-cost-guide', 'abuse-molestation-coverage-guide'],
+  'online-education': ['cyber-threats-schools-guide', 'school-insurance-cost-guide'],
+  'special-education': ['school-liability-guide', 'abuse-molestation-coverage-guide', 'claims-process-guide'],
+  'after-school-programs': ['abuse-molestation-coverage-guide', 'school-insurance-cost-guide', 'student-transportation-guide'],
 };
