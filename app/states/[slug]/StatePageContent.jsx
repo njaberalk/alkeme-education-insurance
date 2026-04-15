@@ -73,7 +73,7 @@ function InternalLinks() {
           <div>
             <h3 className="text-gold font-bold uppercase tracking-[0.12em] mb-4" style={{ fontSize: '0.8rem' }}>Coverage Options</h3>
             <div className="space-y-2">
-              {['general-liability', 'professional-liability', 'abuse-molestation', 'general-liability', 'workers-compensation'].map(slug => (
+              {['general-liability', 'professional-liability', 'abuse-molestation', 'campus-property', 'workers-compensation'].map(slug => (
                 <Link key={slug} href={`/coverage/${slug}/`} className="block text-cream hover:text-gold no-underline" style={{ fontSize: '0.85rem', transition: 'color 0.2s' }}>
                   {slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
                 </Link>
