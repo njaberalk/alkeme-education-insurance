@@ -112,7 +112,7 @@ export const blogPosts = [
     slug: 'student-transportation-risks',
     title: 'Managing Student Transportation Risks',
     metaTitle: 'Student Transportation Risk Management',
-    metaDescription: 'Guide to managing the insurance and safety risks of student transportation. Best practices for school bus operations, field trips, and contracted transportation services.',
+    metaDescription: 'Guide to managing the insurance and safety risks of student transportation.',
     category: 'Tips & Advice',
     publishDate: '2026-02-05',
     heroHeading: 'Managing Student Transportation Risks',
